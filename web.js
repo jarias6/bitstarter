@@ -9,7 +9,7 @@ var app = express();
 app.use(express.logger());
 
 var content;
-fs.readFile('/index.html', function (err, data){
+fs.readFile('/Users/jonellarias/bitstarter/index.html', function (err, data) {
 if (err) {
             throw err;
          }
