@@ -5,7 +5,7 @@ fs = require("fs");
 
 var app = express();
 //app.set("view options", {layout: false});
-app.use(express.static(__dirname + '/bitstarter'));
+//app.use(express.static(__dirname + '/bitstarter'));
 //app.use(express.static(__dirname + '/Users'));
 
 app.use(express.logger());
