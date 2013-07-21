@@ -9,6 +9,9 @@ app.use(express.static(__dirname + '/bitstarter'));
 
 app.use(express.logger());
 
+var index = fs.readFileSync('index.html');
+console.log(index);
+
 //var content;
 //fs.readFile('index.html', function (err, data) {
 //if (err) {
@@ -16,13 +19,13 @@ app.use(express.logger());
 //         }
 //         });
 
-app.get('/', function(request, response) {
-    fs.readFile('index.html',function (err, data){
+//app.get('/', function(request, response) {
+//    fs.readFile('index.html',function (err, data){
       // response.send(data);
 	 //response.write(data);
-	 console.log(data);
-	}); 
-    });
+//	 console.log(data);
+//	}); 
+//    });
 
 var port  = process.env.PORT || 8080;
 app.listen(port, function() {
