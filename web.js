@@ -17,8 +17,9 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
     fs.readFile('index.html',function (err, data){
-	//response.send(data);
-	response.write(data);
+	 //response.send(data);
+	 //response.write(data);
+	 console.log(data);
 	}); 
     });
 
