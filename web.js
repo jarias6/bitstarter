@@ -9,12 +9,11 @@ var app = express();
 app.use(express.logger());
 
 var content;
-fs.readFile('index.html',function (error, data) {
-
-});
+fs.readFile('index.html',function (error, data));
 
 app.get('/', function(request, response) {
-	response.send(response);
+	//response.send(response);
+	response.render(data);
     });
 
 var port  = process.env.PORT || 5000;
