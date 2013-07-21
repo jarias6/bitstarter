@@ -6,11 +6,11 @@ fs = require("fs");
 var app = express();
 //app.set("view options", {layout: false});
 //app.use(express.static(__dirname + '/bitstarter'));
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/Users'));
 
 app.use(express.logger());
 
-var index = fs.readFileSync('/Users/index.html');
+var index = fs.readFileSync("index.html");
 console.log(index);
 
 //var content;
