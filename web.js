@@ -10,11 +10,6 @@ app.use(express.logger());
 
 var content;
 fs.readFile('index.html',function (error, data) {
-if (error) 
-{
-throw error;
-}
-content = data;
 console.log(data);
 });
 
