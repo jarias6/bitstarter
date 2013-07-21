@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/bitstarter'));
 
 app.use(express.logger());
 
-var index = fs.readFileSync('index.html');
+var index = fs.readFileSync('./index.html');
 console.log(index);
 
 //var content;
