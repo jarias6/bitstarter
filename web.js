@@ -10,7 +10,7 @@ app.use(express.static(__dirname + '/bitstarter'));
 
 app.use(express.logger());
 
-var index = fs.readFileSync('index.html','utf-8' );
+var index = fs.readFileSync('/Users/jonellarias/bitstarter/index.html','utf-8');
 console.log(index);
 
 //var content;
