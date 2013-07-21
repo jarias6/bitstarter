@@ -1,4 +1,5 @@
 var express = require('express');
+
 // Include http module,
 var http = require("http"),
 // And mysql module you've just installed.
@@ -8,7 +9,7 @@ var app = express();
 app.use(express.logger());
 
 var content;
-fs.readFile('./index.html',function (error, data) {
+fs.readFile('index.html',function (error, data) {
 if (error) 
 {
 throw error;
@@ -18,7 +19,7 @@ console.log(data);
 });
 
 app.get('/', function(request, response) {
-	response.send(content);
+	response.send(response);
     });
 
 var port  = process.env.PORT || 5000;
