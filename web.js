@@ -7,16 +7,18 @@ fs = require("fs");
 var app = express();
 app.use(express.logger());
 
-fs.readFile('index.html',function (error, data) {
+var content;
+fs.readFile('./index.html',function (error, data) {
 if (error) 
 {
 throw error;
 }
+content = data;
 console.log(data);
 });
 
 app.get('/', function(request, response) {
-	response.send(data);
+	response.send(content);
     });
 
 var port  = process.env.PORT || 5000;
