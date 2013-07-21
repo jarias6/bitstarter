@@ -44,7 +44,7 @@ http.createServer(function (request, response) {
    // Attach listener on end event.
    request.on("end", function () {
       // Read the file.
-      fs.readFile("index.html", 'utf-8', function (error, data) {
+      fs.readFile('./index.html', 'utf-8', function (error, data) {
          // Write headers.
          response.writeHead(200, {
             'Content-Type': 'text/plain'
