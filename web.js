@@ -9,7 +9,10 @@ var app = express();
 app.use(express.logger());
 
 var content;
-fs.readFile('index.html',function (error, data));
+fs.readFile('/index.html',function (error, data)
+if (err) {
+            throw err;
+        });
 
 app.get('/', function(request, response) {
 	response.send(data);
