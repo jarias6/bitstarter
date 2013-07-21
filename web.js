@@ -1,14 +1,12 @@
 var express = require('express');
 var sys = require('sys');
-app.set("view options", {layout: false});
-    app.use(express.static(__dirname + '/bitstarter'));
-
-// Include http module,
-//var http = require("http"),
 
 fs = require("fs");
 
 var app = express();
+app.set("view options", {layout: false});
+app.use(express.static(__dirname + '/bitstarter'));
+
 app.use(express.logger());
 
 //var content;
