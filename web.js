@@ -10,8 +10,8 @@ var app = express();
 
 app.use(express.logger());
 
-var index = fs.readFileSync("./index.html","utf-8");  
-console.log(index);
+//var index = fs.readFileSync("./index.html","utf-8");  
+//console.log(index);
 
 //var content;
 //fs.readFile('index.html', function (err, data) {
@@ -20,13 +20,14 @@ console.log(index);
 //         }
 //         });
 
-//app.get('/', function(request, response) {
-//    fs.readFile('index.html',function (err, data){
-      // response.send(data);
+app.get('/', function(request, response) {
+       fs.readFile("./index.html","utf-8",function (err, data){
+       console.log(data);
+       response.send(data);
 	 //response.write(data);
-//	 console.log(data);
-//	}); 
-//    });
+	 
+	}); 
+    });
 
 var port  = process.env.PORT || 8080;
 app.listen(port, function() {
