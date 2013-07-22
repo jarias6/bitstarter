@@ -9,7 +9,7 @@ app.use(express.logger());
 app.get('/', function(request, response) { 
        fs.readFile("./index.html","utf-8",function (err, data){  
        console.log("index.html: " + data);
-      // response.send(data);
+       response.send(data);
     });
     });
 
